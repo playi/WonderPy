@@ -6,5 +6,4 @@ __pycache__/
 build/
 develop-eggs/
 dist/
-
-
+.DS_Store
