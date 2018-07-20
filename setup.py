@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="WonderPy",
-    version="0.0.1",
+    version="0.0.5",
     author="Orion Elenzil",
     author_email="orion@makewonder.com",
     description="Python API for working with Wonder Workshop robots",
@@ -26,12 +26,8 @@ setuptools.setup(
         "Operating System :: MacOS",
         "Programming Language :: Python :: 2.7",
     ),
-    # note that this requires WonderWorkshop's own github-hosted fork of Adafruit_BluefruitLE.
-    #      see requirements.txt.
-    install_requires=[ 'mock', 'svgpathtools', 'Adafruit_BluefruitLE'],
-    keywords=['robots', 'dash', 'dot', 'cue', 'wonder workshop', 'robotics', 'sketchkit'],
+    keywords=['robots', 'dash', 'dot', 'cue', 'wonder workshop', 'robotics', 'sketchkit',],
     test_suite='test',
+    install_requires=['mock', 'svgpathtools',],
+    # this also requires pip install git+git://github.com/playi/Adafruit_Python_BluefruitLE@928669a#egg=Adafruit_BluefruitLE
 )
-
-
-
