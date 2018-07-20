@@ -1,4 +1,10 @@
 *.pyc
+*.pyo
 venv/
 .idea/
+__pycache__/
+build/
+develop-eggs/
+dist/
+
 
