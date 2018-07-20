@@ -1,0 +1,6 @@
+mock
+svgpathtools
+
+# our own fork of this library, for pulling out manufacturer data from the BTLE advertisement.
+git+git://github.com/playi/Adafruit_Python_BluefruitLE@928669a#egg=Adafruit_BluefruitLE
+
