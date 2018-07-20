@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="WonderPy",
-    version="0.1.0",
+    version="0.0.1",
     author="Orion Elenzil",
     author_email="orion@makewonder.com",
     description="Python API for working with Wonder Workshop robots",
@@ -14,7 +14,7 @@ setuptools.setup(
     url="https://github.com/playi/WonderPy",
     packages=setuptools.find_packages(),
     classifiers=(
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 2 - Pre-Alpha",
         "Environment :: Console",
         "Environment :: MacOS X",
         "Framework :: Robot Framework",
