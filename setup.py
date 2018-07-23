@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="WonderPy",
-    version="0.0.5",
+    version="0.0.8",
     author="Orion Elenzil",
     author_email="orion@makewonder.com",
     description="Python API for working with Wonder Workshop robots",
@@ -13,6 +13,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/playi/WonderPy",
     packages=setuptools.find_packages(),
+    package_data={'WonderPy': ['lib/WonderWorkshop/osx/*.dylib']},
     classifiers=(
         "Development Status :: 2 - Pre-Alpha",
         "Environment :: Console",
@@ -28,6 +29,6 @@ setuptools.setup(
     ),
     keywords=['robots', 'dash', 'dot', 'cue', 'wonder workshop', 'robotics', 'sketchkit',],
     test_suite='test',
-    install_requires=['mock', 'svgpathtools',],
+    install_requires=['mock', 'svgpathtools', 'PyObjC'],
     # this also requires pip install git+git://github.com/playi/Adafruit_Python_BluefruitLE@928669a#egg=Adafruit_BluefruitLE
 )

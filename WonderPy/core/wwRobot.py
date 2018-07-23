@@ -1,5 +1,10 @@
-import queue
 import time
+import sys
+
+if sys.version_info > (3, 0):
+    import queue
+else:
+    import Queue as queue
 
 from WonderPy.core.wwConstants import WWRobotConstants
 from WonderPy.core.wwCommands import WWCommands

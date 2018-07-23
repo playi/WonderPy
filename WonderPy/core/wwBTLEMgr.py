@@ -1,17 +1,29 @@
 # -*- coding: utf-8 -*-
 
 import uuid
-import Adafruit_BluefruitLE
 import ctypes
 import json
 import sys
 import argparse
-import queue
 import time
+import os
+
+try:
+    import Adafruit_BluefruitLE
+except ImportError:
+    print("Unable to import module: Adafruit_BluefruitLE. You may need to install it manually. See the README.md for WonderPy.")
+    raise
+
+
+if sys.version_info > (3, 0):
+    import queue
+else:
+    import Queue as queue
 
 from wwRobot import WWRobot
 from wwConstants import WWRobotConstants
 from WonderPy.core import wwMain
+from WonderPy.config import WW_ROOT_DIR
 
 
 class WWException(Exception):
@@ -80,7 +92,9 @@ class WWBTLEManager(object):
         ]
 
     def _load_HAL(self):
-        self.libHAL = ctypes.cdll.LoadLibrary('WonderPy/lib/WonderWorkshop/osx/libWWHAL.dylib')
+
+        HAL_path = os.path.join(WW_ROOT_DIR, 'lib/WonderWorkshop/osx/libWWHAL.dylib')
+        self.libHAL = ctypes.cdll.LoadLibrary(HAL_path)
         self.libHAL.packets2Json.restype  = (ctypes.c_char_p)
         # self.libHAL.json2Packets.argtypes = (c_char_p, WWBTLEManager.two_packet_wrappers)
 
@@ -269,10 +283,6 @@ class WWBTLEManager(object):
 
         # Once service discovery is complete create an instance of the service
         # and start interacting with it.
-        # oxe: the following line crashes.
-        # I'm not sure how to get robot type w/o the manufacturer data.
-        # dis = DeviceInformation(device)
-        # print('Manufacturer: {0}'.format(dis.manufacturer))
 
         def cp_data_into_c_byte_array(dst, src):
             n = 0
