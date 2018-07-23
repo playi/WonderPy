@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="WonderPy",
-    version="0.0.9",
+    version="0.0.8",
     author="Orion Elenzil",
     author_email="orion@makewonder.com",
     description="Python API for working with Wonder Workshop robots",
@@ -32,5 +32,3 @@ setuptools.setup(
     install_requires=['mock', 'svgpathtools', 'PyObjC'],
     # this also requires pip install git+git://github.com/playi/Adafruit_Python_BluefruitLE@928669a#egg=Adafruit_BluefruitLE
 )
-
-print("WonderWorkshop robot API installed, but before it can be used be sure to follow the instructions in the README to install the AdaFruit BTLE module.")
