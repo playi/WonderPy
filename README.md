@@ -38,7 +38,7 @@ One of those is this "hello world" example. Copy this file into "hello_world.py"
 
 ```
 from threading import Thread
-from time import time
+import time
 
 import WonderPy.core.wwMain
 from WonderPy.core.wwConstants import WWRobotConstants

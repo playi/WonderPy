@@ -211,6 +211,9 @@ class WWBTLEManager(object):
             sys.stdout.write('.\n')
 
         device = None
+        sys.stdout.write('\n')
+        sys.stdout.flush()
+
 
         if len(devices) == 0:
             print("no suitable robots found!")
