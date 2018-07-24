@@ -38,13 +38,13 @@ class WWCommandBody(WWCommandBase):
                      False)
 
     @do_not_call_within_connect_or_sensors
-    def do_pose(self, x_cm, y_cm, degrees, time, mode, ease=True,
+    def do_pose(self, x_cm, y_cm, degrees, time, mode=WWRobotConstants.WWPoseMode.WW_POSE_MODE_RELATIVE_MEASURED, ease=True,
                 direction=WWRobotConstants.WWPoseDirection.WW_POSE_DIRECTION_INFERRED,
                 wrap_theta=True):
         self.stage_pose(x_cm, y_cm, degrees, time, mode, ease, direction, wrap_theta)
         self._robot.sensors.pose.block_until_idle(time + 10.0)
 
-    def stage_pose(self, x_cm, y_cm, degrees, time, mode, ease=True,
+    def stage_pose(self, x_cm, y_cm, degrees, time, mode=WWRobotConstants.WWPoseMode.WW_POSE_MODE_RELATIVE_MEASURED, ease=True,
                    direction=WWRobotConstants.WWPoseDirection.WW_POSE_DIRECTION_INFERRED,
                    wrap_theta=True):
         cmds = self.compose_pose(x_cm, y_cm, degrees, time, mode, ease, direction, wrap_theta)
