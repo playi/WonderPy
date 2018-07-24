@@ -45,7 +45,7 @@ The WonderPy robot API lets you send commands to the robot and also inspect the 
 ## "do" vs. "stage"
 Many commands come in two flavours: the more primitive versions all begin with the word **stage\_**. These versions send the command to the robot and return immediately. In other words, they do not "block" execution.  The other flavour begin with the word **do\_**. These versions send the command and wait for it to finish. In other words, they do block execution. The "Do_" commands should only be used inside some form on concurrent execution such as a thread.  
 
-With the exception of the [Pose commands](#robot_commands_body) the robot does not maintain any queue of commands: once sent to the robot, a second command which uses the same physical actuators as a previous command will immediately override the previous command.
+With the exception of the [Pose commands](#robotcommandsbody) the robot does not maintain any queue of commands: once sent to the robot, a second command which uses the same physical actuators as a previous command will immediately override the previous command.
 
 ## robot.commands.eyering
 Each robot has a ring of twelve LEDs around the eye, this is called the 'eyering'. The commands in this object let you control the state of each individual LED as well as the overall brightness.
