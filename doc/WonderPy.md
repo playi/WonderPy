@@ -35,7 +35,7 @@ The WonderPy robot API lets you send commands to the robot and also inspect the 
   * [speaker](#robotsensorsspeaker)
   * [wheel\_left](#robotsensorswheel_left)
   * [wheel\_right](#robotsensorswheel_right)
-* [Coordinate Systems](#coodinate-systems)
+* [Coordinate Systems](#coordinate-systems)
 * [Units](#units)
 * [Share your work !](#share-your-work-)
 
