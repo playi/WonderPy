@@ -7,6 +7,39 @@ This document gives an overview of the structure, commands, and members in the A
 
 The WonderPy robot API lets you send commands to the robot and also inspect the current state of the robot's sensors.
 
+# Contents
+* [Commands](#commands)
+  * ["do" vs. "stage"](#do_vs_stage)
+  * [eyering](#robot.commands.eyering)
+  * [head](#robot.commands.head)
+  * [media](#robot.commands.media)
+  * [monoLED](#robot.commands.monoled)
+  * [body](#robot.commands.body)
+  * [RGB](#robot.commands.rgb)
+  * [accessory](#robot.commands.accessory)
+* [Sensors](#sensors)
+  * [accelerometer](#robot.sensors.accelerometer)
+  * [animation](#robot.sensors.animation)
+  * [beacon](#robot.sensors.beacon)
+  * [button_1](#robot.sensors.button_1)
+  * [button_2](#robot.sensors.button_2)
+  * [button_3](#robot.sensors.button_3)
+  * [button_main](#robot.sensors.button_main)
+  * [distance_front_left_facing](#robot.sensors.distance_front_left_facing)
+  * [distance_front_right_facing](#robot.sensors.distance_front_right_facing)
+  * [distance_front_rear](#robot.sensors.distance_front_rear)
+  * [gyroscope](#robot.sensors.gyroscope)
+  * [head_pan](#robot.sensors.head_pan)
+  * [head_tilt](#robot.sensors.head_tilt)
+  * [pose](#robot.sensors.pose)
+  * [speaker](#robot.sensors.speaker)
+  * [wheel_left](#robot.sensors.wheel_left)
+  * [wheel_right](#robot.sensors.wheel_right)
+* [Coordinate Systems](#coodinate_systems)
+* [Units](#units)
+* [Share your work !](#share_your_work)
+
+
 # Commands
 ## "do" vs. "stage"
 Many commands come in two flavours: the more primitive versions all begin with the word **stage\_**. These versions send the command to the robot and return immediately. In other words, they do not "block" execution.  The other flavour begin with the word **do\_**. These versions send the command and wait for it to finish. In other words, they do block execution. The "Do_" commands should only be used inside some form on concurrent execution such as a thread.  
