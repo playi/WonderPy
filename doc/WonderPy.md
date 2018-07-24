@@ -71,7 +71,7 @@ Drive forward the specified distance and then stop.
 Turn counter-clockwise the specified degrees and then stop.
 ### robot.comands.body.do_pose(x, y, degrees, time, mode)
 Drive to a 'pose' within the given time and then stop.  
-Be sure to undestand the [coordinate system](#coordinate-systems).  
+Be sure to understand the [coordinate system](#coordinate-systems).  
 A 'Pose' means a position and an orientation for the robot. 
 By default this pose will be relative to the robot's current position when the command is issued. This is the most common use-case.  However overall accuracy across multiple pose commands will be improved by specifying the mode in terms of a global coordinate system, which is not relative to the robot's current position.  
 The different modes are described in the WWPoseMode class in [wwConstants.py](../WonderPy/core/wwConstants.py).  
@@ -147,15 +147,15 @@ Realtime information about the angular velocity of the robot around 3 axes.
 Available on Dash and Cue.
 ## robot.sensors.head_pan
 The current pan of the robot's head.  
-Be sure to undestand the [coordinate system](#coordinate-systems).  
+Be sure to understand the [coordinate system](#coordinate-systems).  
 Available on Dash and Cue.
 ## robot.sensors.head_tilt
 The current tilt of the robot's head.  
-Be sure to undestand the [coordinate system](#coordinate-systems).  
+Be sure to understand the [coordinate system](#coordinate-systems).  
 Available on Dash and Cue.
 ## robot.sensors.pose
 Provides the position and orientation of the robot, relative to the global coordinate system. Also provides information about the current depth of the robot-resident "pose queue".  The pose information is synthesized by the robot from its wheel encoders and gyroscope.  This data is responsive to just pushing the robot with your hands, as well as driving the robot with commands.  
-Be sure to undestand the [coordinate system](#coordinate-systems).  
+Be sure to understand the [coordinate system](#coordinate-systems).  
 Available on Dash and Cue.
 ## robot.sensors.speaker
 Boolean indicator of whether or not the robot is currently playing a sound.
