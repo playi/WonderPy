@@ -100,11 +100,11 @@ For the [SketchKit accessory](https://store.makewonder.com/pages/sketch-kit), mo
 ### robot.commands.accessory.do_xylo_hit()
 For the [Xylophone accessory](https://www.makewonder.com/dash##accessories), perform a single 'hit' of the mallet.
 ### robot.commands.accessory.do_launcher_launch(power)
-For the [Xylophone accessory](https://www.makewonder.com/dash##accessories), launch a loaded ball.
+For the [Launcher accessory](https://www.makewonder.com/dash##accessories), launch a loaded ball.
 ### robot.commands.accessory.do_launcher_reload_left()
-For the [Xylophone accessory](https://www.makewonder.com/dash##accessories), load a ball from the left hopper.
+For the [Launcher accessory](https://www.makewonder.com/dash##accessories), load a ball from the left hopper.
 ### robot.commands.accessory.do_launcher_reload_right()
-For the [Xylophone accessory](https://www.makewonder.com/dash##accessories), load a ball from the right hopper.
+For the [Launcher accessory](https://www.makewonder.com/dash##accessories), load a ball from the right hopper.
 
 
 # Sensors
