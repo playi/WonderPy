@@ -9,7 +9,7 @@ The WonderPy robot API lets you send commands to the robot and also inspect the 
 
 # Contents
 * [Commands](#commands)
-  * ["do" vs. "stage"](#dovsstage)
+  * ["do" vs. "stage"](#do-vs-stage)
   * [eyering](#robotcommandseyering)
   * [head](#robotcommandshead)
   * [media](#robotcommandsmedia)
