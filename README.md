@@ -32,7 +32,8 @@ Unfortunately the AdaFruit BTLE package is not hosted on PyPi, which makes it di
 
 # Getting Started
 The steps above install the core library.  
-There are many examples of using it separately in the github repository [playi/WonderPyExamples](https://github.com/playi/WonderPyExamples).  It is *highly* recommended to look at those examples.  
+There are many examples of using it separately in the github repository [playi/WonderPyExamples](https://github.com/playi/WonderPyExamples).  
+**It is *highly* recommended to look at those examples.**
 
 Additional documentation is in the source code and also in [doc/WonderPy.md](doc/WonderPy.md).
 
