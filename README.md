@@ -23,7 +23,7 @@ At an "Alpha" release. It's ready to be tried out by folks who are willing to li
 1. `virtualenv --python=/usr/bin/python2.7 --no-site-packages venv`
 2. `source venv/bin/activate`
 
-## Install depencies
+## Install dependencies
 Unfortunately the AdaFruit BTLE package is not hosted on PyPi, which makes it difficult to automatically install when this package is installed via pip. Additionally, this project requires a fork of that project by WonderWorkshop, which as of this writing has not been merged back into the main project.
 1. `pip install git+git://github.com/playi/Adafruit_Python_BluefruitLE@928669a#egg=Adafruit_BluefruitLE`
 
