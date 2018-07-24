@@ -5,7 +5,24 @@ class WWMedia(object):
 
     class WWSound(object):
 
-        # the first four characters of the value are the "folder" for the sound.
+        class WWSoundCustom(object):
+            """
+            These are the custom sounds recorded by users and transferred to the robot.
+            Some (or all) of them may not be present.
+            Currently this API does not support transferring sounds to the robot,
+            so this must be done using another app such as Wonder, Blockly, or Cue.
+            """
+            CUSTOM_01 = "SYSTVOICE0"    # Custom user sound in "slot 1"
+            CUSTOM_02 = "SYSTVOICE1"    # Custom user sound in "slot 2"
+            CUSTOM_03 = "SYSTVOICE2"    # Custom user sound in "slot 3"
+            CUSTOM_04 = "SYSTVOICE3"    # Custom user sound in "slot 4"
+            CUSTOM_05 = "SYSTVOICE4"    # Custom user sound in "slot 5"
+            CUSTOM_06 = "SYSTVOICE5"    # Custom user sound in "slot 6"
+            CUSTOM_07 = "SYSTVOICE6"    # Custom user sound in "slot 7"
+            CUSTOM_08 = "SYSTVOICE7"    # Custom user sound in "slot 8"
+            CUSTOM_09 = "SYSTVOICE8"    # Custom user sound in "slot 9"
+            CUSTOM_10 = "SYSTVOICE9"    # Custom user sound in "slot 10"
+
 
         class WWSoundDot(object):
             AIRPORTJET   = "SYSTAIRPORTJET"    # Airplane
