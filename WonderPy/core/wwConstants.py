@@ -264,9 +264,19 @@ class WWRobotConstants(object):
         WW_EYEANIM_BITMAP     = 0xffff
 
     class WWPoseMode:
+        # interpret the pose as relative to the global coordinate system.
+        # this is the most accurate mode.
         WW_POSE_MODE_GLOBAL            = 0
+
+        # interpret the pose as relative to where the robot _should_ be, according to the previous pose command.
         WW_POSE_MODE_RELATIVE_COMMAND  = 1
+
+        # interpret the pose as relative to the robot's current measured position.
+        # this is the most common use-case, but can accumulate error over time.
         WW_POSE_MODE_RELATIVE_MEASURED = 2
+
+        # do not actually drive the robot, instead tell the robot to reset its global coordinate to this.
+        # typically this is used with x, y, theta = 0.
         WW_POSE_MODE_SET_GLOBAL        = 3
 
     class WWPoseDirection:
