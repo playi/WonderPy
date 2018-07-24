@@ -12,7 +12,6 @@ At an "Alpha" release. It's ready to be tried out by folks who are willing to li
 * Flesh-out inline documentation.
 * Make the pip installation more standard.
   Currently this requires a manual install of a github-based fork of the AdaFruit package.
-* Provide more documentation around the Pose command.
 * Port to Windows, Linux
 
 # Setup
