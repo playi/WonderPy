@@ -153,5 +153,16 @@ Upon launching any of the examples, the app will scan for robots for at least 5 
 # Documentation
 Documentation is still also in Alpha stage, but some basics of working with the robot are [here](doc/WonderPy.md).
 
+# Contribute
+Please check the list of issues and todo's at the [WonderPy repository on github](https://github.com/playi/WonderPy/issues).  
+Pull-Requests are welcome.
+
+# Get Help
+If there's a specific bug or problem with the API, please check the [outstanding issues](https://github.com/playi/WonderPy/issues) and if it's not already covered, create a new one.  
+If you have a more general question such as "how do I..." or "has anyone done ..." or you have a tip you'd like to share, please visit [robotics.stackexchange.com](https://robotics.stackexchange.com) and use the tag **wonderworkshop** .
+
 # Share your work !
-Got a great picture or video ? Tweet it out to @WonderWorkshop !
+Got a great picture or video ?  
+Share your Dash, Dot or Cue work on [Twitter](https://twitter.com/WonderWorkshop) or [Instagram](https://www.instagram.com/wonderworkshop/) and tag **@WonderWorkshop** !
+
+
