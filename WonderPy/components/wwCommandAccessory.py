@@ -33,34 +33,6 @@ class WWCommandAccessory(WWCommandBase):
         self._robot.cmds.head.do_pan_voltage(self.SKETCH_PEN_UP_VOLTAGE_PAN)
         time.sleep(0.2)
 
-    def stage_blaster_fire(self, num_shots=1):
-        message = 8 + num_shots
-        self.stage_LED_message([_rc.WW_COMMAND_LIGHT_RGB_LEFT_EAR, ], message)
-
-    def stage_blaster_test_connection(self):
-        message = 4
-        self.stage_LED_message([_rc.WW_COMMAND_LIGHT_RGB_LEFT_EAR, ], message)
-
-    def stage_LED_message(self, LEDs, message):
-        """
-        :param LEDs:    a list of WW_COMMAND_LIGHT_RGB_LEFT_EAR etc.
-        :param message: a one-byte message
-        :return:        nothing
-        """
-        self._robot.stage_cmds(self.compose_LED_message(LEDs, message))
-
-    # noinspection PyDictCreation
-    def compose_LED_message(self, LEDs, message):
-        """
-        :param LEDs:    a list of WW_COMMAND_LIGHT_RGB_LEFT_EAR etc.
-        :param message: a one-byte message
-        :return:        json command
-        """
-        args = {}
-        args[_rcv.WW_COMMAND_VALUE_LEDS   ] = LEDs
-        args[_rcv.WW_COMMAND_VALUE_MESSAGE] = message
-        return {_rc.WW_COMMAND_LED_MESSAGE : args}
-
     @do_not_call_within_connect_or_sensors
     def do_xylo_hit(self):
         self.stage_xylo_hit()

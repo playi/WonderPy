@@ -51,9 +51,6 @@ class MyTestCase(unittest.TestCase):
         self.assertAlmostEquals(m.call_args_list[1][0][0]['401']['dir' ],  0  )
         self.assertAlmostEquals(m.call_args_list[2][0][0]['401']['dir' ],  1  )
 
-    def test_blaster(self):
-        print("todo: implement blaster test-cases")
-
 
 if __name__ == '__main__':
     unittest.main()
