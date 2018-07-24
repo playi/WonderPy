@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="WonderPy",
-    version="0.0.10",
+    version="0.0.11",
     author="Orion Elenzil",
     author_email="orion@makewonder.com",
     description="Python API for working with Wonder Workshop robots",

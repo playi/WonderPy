@@ -34,6 +34,7 @@ Unfortunately the AdaFruit BTLE package is not hosted on PyPi, which makes it di
 # Getting Started
 The steps above install the core library.  
 There are many examples of using it separately in the github repository [playi/WonderPyExamples](https://github.com/playi/WonderPyExamples).  It is *highly* recommended to look at those examples.
+
 One of those is this "hello world" example. Copy this file into "hello_world.py" and run it.
 
 ```
@@ -147,33 +148,8 @@ Upon launching any of the examples, the app will scan for robots for at least 5 
 * Connect ASAP to any robot named 'orions robot', no matter what type of robot it is.  
 `python demos/roboFun.py --connect-eager --connect-name "orions robot"`  
 
-# Coordinate Systems
-The python API uses a right-handed coordinate system with:
+# Documentation
+Documentation is still also in Alpha stage, but some basics of working with the robot are [here](doc/WonderPy.md).
 
-* +X to the right of the robot  (aka Right)  
-
-* +Y in front of the robot (aka Forward)  
-  
-* +Z above ther robot (aka Up)
-
-* Pan is rotation about +Z (Up),  
-  so +Pan is counter-clockwise.
-* Tilt is rotation about +X (Right),  
-  so +Tilt is up.
-* Roll is rotation abount +Y (Forward),
-  so +Roll is leaning to the right.
-  
-| Positions                                | Rotations                                   |
-|------------------------------------------|---------------------------------------------|
-| ![](doc/python_coordinates_position.jpg) | ![](doc/python_coordinates_orientation.jpg) |
-
-**Note!**  
-The json representation of sensors and commands also uses a right-handed system, but with +X as Forward and +Y as Left, and rotations that follow.  In normal use of the Python API you should not encounter this coordinate system tho.
-
-# Units
-The python API uses these units:
-
-* Distances are in Centimeters
-* Angles are in Degrees
-* Times are in Seconds
-* Brightnesses are in [0, 1]
+# Share your work !
+Got a great picture or video ? Tweet it out to @WonderWorkshop !

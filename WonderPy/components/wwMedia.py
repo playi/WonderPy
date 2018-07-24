@@ -4,24 +4,11 @@
 class WWMedia(object):
 
     class WWSound(object):
-
-        class WWSoundCustom(object):
-            """
-            These are the custom sounds recorded by users and transferred to the robot.
-            Some (or all) of them may not be present.
-            Currently this API does not support transferring sounds to the robot,
-            so this must be done using another app such as Wonder, Blockly, or Cue.
-            """
-            CUSTOM_01 = "SYSTVOICE0"    # Custom user sound in "slot 1"
-            CUSTOM_02 = "SYSTVOICE1"    # Custom user sound in "slot 2"
-            CUSTOM_03 = "SYSTVOICE2"    # Custom user sound in "slot 3"
-            CUSTOM_04 = "SYSTVOICE3"    # Custom user sound in "slot 4"
-            CUSTOM_05 = "SYSTVOICE4"    # Custom user sound in "slot 5"
-            CUSTOM_06 = "SYSTVOICE5"    # Custom user sound in "slot 6"
-            CUSTOM_07 = "SYSTVOICE6"    # Custom user sound in "slot 7"
-            CUSTOM_08 = "SYSTVOICE7"    # Custom user sound in "slot 8"
-            CUSTOM_09 = "SYSTVOICE8"    # Custom user sound in "slot 9"
-            CUSTOM_10 = "SYSTVOICE9"    # Custom user sound in "slot 10"
+        # Note that "CUSTOM_XX" are are the custom sounds recorded by users and transferred to the robot.
+        # These are the same for all robots.
+        # Some (or all) of them may not be present!
+        # Currently this API does not support transferring sounds to the robot,
+        # so this must be done using another app such as Wonder, Blockly, or Cue.
 
 
         class WWSoundDot(object):
@@ -45,6 +32,16 @@ class WWMedia(object):
             COW_MOO11A   = "SYSTCOW_MOO11A"    # Cow
             CROCODILE    = "SYSTCROCODILE"     # Crocodile
             CRYING       = "SYSTCRYING"        # Crying
+            CUSTOM_01    = "SYSTVOICE0"        # Custom user sound in "slot 1"
+            CUSTOM_02    = "SYSTVOICE1"        # Custom user sound in "slot 2"
+            CUSTOM_03    = "SYSTVOICE2"        # Custom user sound in "slot 3"
+            CUSTOM_04    = "SYSTVOICE3"        # Custom user sound in "slot 4"
+            CUSTOM_05    = "SYSTVOICE4"        # Custom user sound in "slot 5"
+            CUSTOM_06    = "SYSTVOICE5"        # Custom user sound in "slot 6"
+            CUSTOM_07    = "SYSTVOICE6"        # Custom user sound in "slot 7"
+            CUSTOM_08    = "SYSTVOICE7"        # Custom user sound in "slot 8"
+            CUSTOM_09    = "SYSTVOICE8"        # Custom user sound in "slot 9"
+            CUSTOM_10    = "SYSTVOICE9"        # Custom user sound in "slot 10"
             CYA          = "SYSTCYA"           # See ya!
             DINOSAUR_3   = "SYSTDINOSAUR_3"    # Dinosaur
             DIZZY_A      = "SYSTDIZZY_A"       # Dizzy #1
@@ -207,6 +204,16 @@ class WWMedia(object):
             CURIOUS_04   = "SYSTCURIOUS_04"    # Huh? #1
             CURIOUS_05   = "SYSTCURIOUS_05"    # Unh!
             CURIOUS_06   = "SYSTCURIOUS_06"    # Huh? #2
+            CUSTOM_01    = "SYSTVOICE0"        # Custom user sound in "slot 1"
+            CUSTOM_02    = "SYSTVOICE1"        # Custom user sound in "slot 2"
+            CUSTOM_03    = "SYSTVOICE2"        # Custom user sound in "slot 3"
+            CUSTOM_04    = "SYSTVOICE3"        # Custom user sound in "slot 4"
+            CUSTOM_05    = "SYSTVOICE4"        # Custom user sound in "slot 5"
+            CUSTOM_06    = "SYSTVOICE5"        # Custom user sound in "slot 6"
+            CUSTOM_07    = "SYSTVOICE6"        # Custom user sound in "slot 7"
+            CUSTOM_08    = "SYSTVOICE7"        # Custom user sound in "slot 8"
+            CUSTOM_09    = "SYSTVOICE8"        # Custom user sound in "slot 9"
+            CUSTOM_10    = "SYSTVOICE9"        # Custom user sound in "slot 10"
             CYA          = "SYSTCYA"           # See ya!
             DASH_HI_VO   = "SYSTDASH_HI_VO"    # Hi!
             DASH_OKAY1   = "SYSTDASH_OKAY1"    # Okay #3
@@ -693,6 +700,16 @@ class WWMedia(object):
             charge_YOUVEGOTSE   = "SNCHYOUVEGOTSE"    # You've got to see the latest report from the field.
             charge_ZERO         = "SNCHZERO"          # Zero
             charge_ZEROPOTU     = "SNCHZEROPOTU"      # Zero point turn!
+            CUSTOM_01           = "SYSTVOICE0"        # Custom user sound in "slot 1"
+            CUSTOM_02           = "SYSTVOICE1"        # Custom user sound in "slot 2"
+            CUSTOM_03           = "SYSTVOICE2"        # Custom user sound in "slot 3"
+            CUSTOM_04           = "SYSTVOICE3"        # Custom user sound in "slot 4"
+            CUSTOM_05           = "SYSTVOICE4"        # Custom user sound in "slot 5"
+            CUSTOM_06           = "SYSTVOICE5"        # Custom user sound in "slot 6"
+            CUSTOM_07           = "SYSTVOICE6"        # Custom user sound in "slot 7"
+            CUSTOM_08           = "SYSTVOICE7"        # Custom user sound in "slot 8"
+            CUSTOM_09           = "SYSTVOICE8"        # Custom user sound in "slot 9"
+            CUSTOM_10           = "SYSTVOICE9"        # Custom user sound in "slot 10"
             pep_1THBUO          = "SNPE1THBUO"        # #1 The buttons on my head will light up and then you try to copy it by pushing the same buttons, in the same order. If you can do the whole thing, you totally win! If you can't get 'em right, then you can just try again whenever you want. No worries!
             pep_2IFYOC          = "SNPE2IFYOC"        # #2 If you can keep up with me, then it will keep getting harder, but I know you are gonna completely rock it!
             pep_3OHIK           = "SNPE3OHIK"         # #3 Oh, I know you would never do it, but if you cheat by picking me up or grabbing my head, then it will be bad, very, very bad. Just kidding, you'll just lose.
