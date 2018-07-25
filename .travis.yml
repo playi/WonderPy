@@ -18,4 +18,4 @@ install:
   - py.test --version
 
 script:
-  - py.test -v tests
+  - py.test -v test
