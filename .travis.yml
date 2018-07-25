@@ -1,9 +1,13 @@
-os: osx
-
 language: python
 
 python:
   - "2.7"
+
+before_install:
+  - rm setup.py
+  - mv setup.py.travis setup.py
+  - rm requirements.txt
+  - mv requirements.txt.travis requirements.txt
 
 install:
   - python setup.py install
