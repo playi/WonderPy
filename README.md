@@ -1,8 +1,10 @@
 # WonderPy
+[![Build status](https://travis-ci.org/playi/WonderPy.svg?master)](https://travis-ci.org/playi)
+
 This is an alpha-status project to bring realtime control of the WonderWorkshop robots to Python.  
 To get the most out of this, you should already have a beginner-level comfort with python and the command-line.
 # Project Status
-At an "Alpha" release. It's ready to be tried out by folks who are willing to live with a few more rough-edges than one would want, and ideally who can provide constructive criticism.
+At an "Alpha" release. It's ready to be tried out by folks who are willing to live with a few more rough-edges than one would want, and ideally who can provide constructive criticism.  
 
 ## Known Issues and To-Do's
 * Only works with a single robot.
