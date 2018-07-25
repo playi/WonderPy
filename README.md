@@ -157,11 +157,15 @@ Documentation is still also in Alpha stage, but some basics of working with the 
 
 # Contribute
 Please check the list of issues and todo's at the [WonderPy repository on github](https://github.com/playi/WonderPy/issues).  
-Pull-Requests are welcome.
+Pull-Requests are welcome.  
+Feature requests for the API should also be sent as a new [Issue](https://github.com/playi/WonderPy/issues).  
 
 # Get Help
+### Report Bugs
 If there's a specific bug or problem with the API, please check the [outstanding issues](https://github.com/playi/WonderPy/issues) and if it's not already covered, create a new one.  
-If you have a more general question such as "how do I..." or "has anyone done ..." or you have a tip you'd like to share, please visit [robotics.stackexchange.com](https://robotics.stackexchange.com) and use the tag **wonderworkshop** .
+
+### Ask for Advice
+If you have a more general question such as "how would I approach doing .." or you have a tip you'd like to share, please visit [robotics.stackexchange.com](https://robotics.stackexchange.com) and use the phrase **cleverbots** in the subject and body.
 
 # Share your work !
 Got a great picture or video ?  
