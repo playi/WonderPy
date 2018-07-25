@@ -7,6 +7,9 @@ To get the most out of this, you should already have a beginner-level comfort wi
 At an "Alpha" release. It's ready to be tried out by folks who are willing to live with a few more rough-edges than one would want, and ideally who can provide constructive criticism.  
 
 ## Known Issues and To-Do's
+Please see the ["Issues" in github](https://github.com/playi/WonderPy/issues) for an up-to-date list.  
+As of this writing, the open issues are:
+
 * Only works with a single robot.
 * Only works with Python2.7.  
   The limiting factor here is getting the AdaFruit BTLE package to run under Python3. There's evidence this is possible.
@@ -158,17 +161,17 @@ Documentation is still also in Alpha stage, but some basics of working with the 
 # Contribute
 Please check the list of issues and todo's at the [WonderPy repository on github](https://github.com/playi/WonderPy/issues).  
 Pull-Requests are welcome.  
-Feature requests for the API should also be sent as a new [Issue](https://github.com/playi/WonderPy/issues).  
+Feature requests for the API should also be sent as a [new Issue in github](https://github.com/playi/WonderPy/issues).  
 
 # Get Help
 ### Report Bugs
-If there's a specific bug or problem with the API, please check the [outstanding issues](https://github.com/playi/WonderPy/issues) and if it's not already covered, create a new one.  
+If there's a specific bug or problem with the API, please check the [outstanding issues in github](https://github.com/playi/WonderPy/issues) and if it's not already covered, create a new one.  
 
 ### Ask for Advice
-If you have a more general question such as "how would I approach doing .." or you have a tip you'd like to share, please visit [robotics.stackexchange.com](https://robotics.stackexchange.com) and use the phrase **cleverbots** in the subject and body.
+If you have a more general question such as "how would I approach doing .." or you have a tip you'd like to share, please visit [stackoverflow](https://stackoverflow.com/) and be sure to tag your post with **wonderworkshop**.
 
-# Share your work !
+# Sharing your work ?
 Got a great picture or video ?  
-Share your Dash, Dot or Cue work on [Twitter](https://twitter.com/WonderWorkshop) or [Instagram](https://www.instagram.com/wonderworkshop/) and tag **@WonderWorkshop** !
+If you're sharing your Dash, Dot or Cue work on [Twitter](https://twitter.com/WonderWorkshop) or [Instagram](https://www.instagram.com/wonderworkshop/), remember to tag **@WonderWorkshop** !
 
 
