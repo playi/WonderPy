@@ -6,18 +6,7 @@ To get the most out of this, you should already have a beginner-level comfort wi
 # Project Status
 At an "Alpha" release. It's ready to be tried out by folks who are willing to live with a few more rough-edges than one would want, and ideally who can provide constructive criticism.  
 
-## Known Issues and To-Do's
-Please see the ["Issues" in github](https://github.com/playi/WonderPy/issues) for an up-to-date list.  
-As of this writing, the open issues are:
-
-* Only works with a single robot.
-* Only works with Python2.7.  
-  The limiting factor here is getting the AdaFruit BTLE package to run under Python3. There's evidence this is possible.
-* Once under Python3, update the concurrency model.
-* Flesh-out inline documentation.
-* Make the pip installation more standard.
-  Currently this requires a manual install of a github-based fork of the AdaFruit package.
-* Port to Windows, Linux
+Please see the ["Issues" in github](https://github.com/playi/WonderPy/issues) for an up-to-date list of known bugs and to-do items.  
 
 # Setup
 ## Prerequisites
@@ -35,96 +24,30 @@ Unfortunately the AdaFruit BTLE package is not hosted on PyPi, which makes it di
 ## Install WonderPy
 `pip install WonderPy`
 
+# Documentation
+Documentation is still also in Alpha stage.
+
+* [WonderPy readme](https://github.com/playi/WonderPy/blob/master/README.md)
+
+* [WonderPy Robot Reference Manual](https://github.com/playi/WonderPy/blob/master/doc/WonderPy.md)
+
+* [Tutorials and other examples](https://github.com/playi/WonderPyExamples)
+
 # Getting Started
 The steps above install the core library.  
 There are many examples of using it separately in the github repository [playi/WonderPyExamples](https://github.com/playi/WonderPyExamples).  
 **It is *highly* recommended to look at those examples.**
 
-Additional documentation is in the source code and also in [doc/WonderPy.md](doc/WonderPy.md).
+To test basic functionality, run these at the command-line, inside your fresh virtualenv:  
 
-One of the examples is this "hello world" example. Copy this file into "hello_world.py" and run it.
+download the "01\_hello\_world.py" tutorial example:  
+```curl -o 01_hello_world.py https://raw.githubusercontent.com/playi/WonderPyExamples/master/tutorial/01_hello_world.py```  
 
-```
-from threading import Thread
-import time
+run it:  
+```python 01_hello_world.py```
 
-import WonderPy.core.wwMain
-from WonderPy.core.wwConstants import WWRobotConstants
-from WonderPy.components.wwMedia import WWMedia
+It should connect to any nearby robot and say hello !
 
-
-"""
-This example shows very basic connecting to a robot and sending some simple commands.
-Basic steps:
-
-1. add the imports
-2. create a Class (in this case named "MyClass").
-3. create a method named "on_connect" which accepts self and a robot parameter.
-     eg on_connect(self, robot).
-     This will be called when the program connects to a robot.
-4. kick things off my passing an instance of your Class to WonderPy.wwMain.start():
-     WonderPy.wwMain.start(MyClass())
-5. Try it! Your on_connect method should be called.
-6. on_connect() itself should not block - ie, it should return control as soon as possible.
-     However, on_connect() can launch some asynchronous processes, which can block.
-     So do that. In this example we spawn a thread on method thread_hello().
-7. In the thread, try out some robot commands!
-     * Commands of the flavour "stage_foo()" simply send the command to the robot and return.
-         ie, they do not block.
-     * Commands of the flavour "do_foo()" send the commands and block until the command completes.
-"""
-
-
-class MyClass(object):
-
-    def on_connect(self, robot):
-        """
-        Called when we connect to a robot. This method is optional. Do not Block in this method !
-        """
-
-        print("Starting a thread for %s." % (robot.name))
-        Thread(target=self.thread_hello, args=(robot,)).start()
-
-    def thread_hello(self, robot):
-        """
-        :param robot: WWRobot
-        """
-
-        # dictionary mapping robot types to a few sounds for that robot
-        hello_sounds = {
-            WWRobotConstants.RobotType.WW_ROBOT_DASH : [WWMedia.WWSound.WWSoundDash.HOWDY,
-                                                        WWMedia.WWSound.WWSoundDash.HOWSGOING       ],
-            WWRobotConstants.RobotType.WW_ROBOT_DOT  : [WWMedia.WWSound.WWSoundDot .HOWDY,
-                                                        WWMedia.WWSound.WWSoundDot .HOLD_ME         ],
-            WWRobotConstants.RobotType.WW_ROBOT_CUE  : [WWMedia.WWSound.WWSoundCue .zest_HEYWHSU,
-                                                        WWMedia.WWSound.WWSoundCue .charge_BORESTNOC],
-        }
-
-        if robot.robot_type not in hello_sounds:
-            raise ValueError("unhandled robot type: %s on %s" % (str(robot.robot_type), robot.name))
-
-        for sound_name in hello_sounds[robot.robot_type]:
-
-            print("On %s, setting all RGB lights to white." % (robot.name))
-            robot.cmds.RGB.stage_all(1, 1, 1)
-
-            print("On %s, playing '%s'." % (robot.name, sound_name))
-            robot.cmds.media.do_audio(sound_name)
-
-            print("On %s, setting all RGB lights to off." % (robot.name))
-            robot.cmds.RGB.stage_all(0, 0, 0)
-
-            print("Waiting a little bit.")
-            time.sleep(1)
-
-        print("That's all for now.")
-
-
-# kick off the program !
-if __name__ == "__main__":
-    WonderPy.core.wwMain.start(MyClass())
-```
-		
 ## Robot Connection Options
 Upon launching any of the examples, the app will scan for robots for at least 5 and at most 20 seconds.  After scanning, whichever robot had the highest signal strength (RSSI) will be connected to.  This is a reasonable approximation of connecting to the closest robot.
 
@@ -155,8 +78,18 @@ Upon launching any of the examples, the app will scan for robots for at least 5 
 * Connect ASAP to any robot named 'orions robot', no matter what type of robot it is.  
 `python demos/roboFun.py --connect-eager --connect-name "orions robot"`  
 
-# Documentation
-Documentation is still also in Alpha stage, but some basics of working with the robot are [here](doc/WonderPy.md).
+# Known Issues and To-Do's
+Please see the ["Issues" in github](https://github.com/playi/WonderPy/issues) for an up-to-date list of known bugs and to-do items.  
+As of this writing, the open issues are:
+
+* Only works with a single robot.
+* Only works with Python2.7.  
+  The limiting factor here is getting the AdaFruit BTLE package to run under Python3. There's evidence this is possible.
+* Once under Python3, update the concurrency model.
+* Flesh-out inline documentation.
+* Make the pip installation more standard.
+  Currently this requires a manual install of a github-based fork of the AdaFruit package.
+* Port to Windows, Linux
 
 # Contribute
 Please check the list of issues and todo's at the [WonderPy repository on github](https://github.com/playi/WonderPy/issues).  
