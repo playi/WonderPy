@@ -92,9 +92,15 @@ As of this writing, the open issues are:
 * Port to Windows, Linux
 
 # Contribute
+Pull requests are welcome!  
 Please check the list of issues and todo's at the [WonderPy repository on github](https://github.com/playi/WonderPy/issues).  
-Pull-Requests are welcome.  
-Feature requests for the API should also be sent as a [new Issue in github](https://github.com/playi/WonderPy/issues).  
+Additional examples would also be great:
+
+* Integrations with other cool packages
+* IoT integrations
+* Demos with the Sketch Kit accessory
+
+Feature requests for the API should be sent as [new Issues in github](https://github.com/playi/WonderPy/issues).  
 
 # Get Help
 ### Report Bugs
@@ -102,6 +108,10 @@ If there's a specific bug or problem with the API, please check the [outstanding
 
 ### Ask for Advice
 If you have a more general question such as "how would I approach doing .." or you have a tip you'd like to share, please visit [stackoverflow](https://stackoverflow.com/) and be sure to tag your post with **wonderworkshop**.
+
+### Request Features
+Feature requests for the API should be sent as [new Issues in github](https://github.com/playi/WonderPy/issues).  
+
 
 # Sharing your work ?
 Got a great picture or video ?  
