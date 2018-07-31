@@ -65,45 +65,45 @@ The commands in this object let you control the LED in the main button on the to
 The commands in here let you drive the robot.  
 There is some subtlety to these, so we mention some key aspects.  
 As usual, bear in mind that the *do\_* family of commands will block execution until the command completes, while the *stage\_* family send the command and continue execution immediately without waiting for completion.
-### robot.comands.body.do_forward(distance, time)
+### robot.comands.body.do\_forward(distance, speed)
 Drive forward the specified distance and then stop.
-### robot.comands.body.do_turn(degrees, time)
+### robot.comands.body.do\_turn(degrees, speed)
 Turn counter-clockwise the specified degrees and then stop.
-### robot.comands.body.do_pose(x, y, degrees, time, mode)
+### robot.comands.body.do\_pose(x, y, degrees, time, mode)
 Drive to a 'pose' within the given time and then stop.  
 Be sure to understand the [coordinate system](#coordinate-systems).  
 A 'Pose' means a position and an orientation for the robot. 
 By default this pose will be relative to the robot's current position when the command is issued. This is the most common use-case.  However overall accuracy across multiple pose commands will be improved by specifying the mode in terms of a global coordinate system, which is not relative to the robot's current position.  
 The different modes are described in the WWPoseMode class in [wwConstants.py](../WonderPy/core/wwConstants.py).  
 The _time_ parameter is always relative to the moment the command is received by the robot.  Even when the "mode" is relative, the time parameter is interpreted this way.
-Additionally, the pose command is the only command which the robot enqueues.  The robot maintains a queue of up to ten pose commands.  However, be sure to wait for at least one sensor packet to arrive before sending additional pose commands, otherwise the second one will override the first.  When sending pose commands before the current pose is finished, bear in mind that _time_ parameter is always relative to when the command is received by the robot.  The robot provides a sensor called the "pose watermark" indicating the current depth of the pose queue.  This can be monitored in the robot sensor "pose" as the member "watermark_inferred".  The ideal number of poses in the queue is about five.  
+Additionally, the pose command is the only command which the robot enqueues.  The robot maintains a queue of up to ten pose commands.  However, be sure to wait for at least one sensor packet to arrive before sending additional pose commands, otherwise the second one will override the first.  When sending pose commands before the current pose is finished, bear in mind that _time_ parameter is always relative to when the command is received by the robot.  The robot provides a sensor called the "pose watermark" indicating the current depth of the pose queue.  This can be monitored in the robot sensor "pose" as the member "watermark\_inferred".  The ideal number of poses in the queue is about five.  
 Managing these details of the pose system can be complex, and for that reason this API provides a simplified system which allows you to provide a list of points and a linear and angular speed, and will manage generating the corresponding poses and sending them to the robot at the appropriate intervals.  The use of this utility can be seen in the ["sketcher.py" example in the WonderPyExamples](https://github.com/playi/WonderPyExamples/blob/master/misc/sketcher.py) repository.
-### robot.comands.body.stage_stop()
+### robot.comands.body.stage\_stop()
 Stop driving.
-### robot.comands.body.stage_wheel_speeds(left, right)
+### robot.comands.body.stage\_wheel\_speeds(left, right)
 Drive the robot with the corresponding wheel speeds.  
-Note this is actually converted to _stage_linear_angular()_ for improved accuracy.
-### robot.comands.body.stage_wheel_speeds_naive(left, right)
+Note this is actually converted to _stage\_linear\_angular()_ for improved accuracy.
+### robot.comands.body.stage\_wheel\_speeds\_naive(left, right)
 Drive the robot with the corresponding wheel speeds.  
-In almost all cases, stage_wheel_speeds() should be used instead of this. But if you want to set the wheel speeds regardless of robot motion, for example to use the wheels as motors for a contraption, this command will work.
-### robot.comands.body.stage_linear_angular(linear_speed, angular_speed)
+In almost all cases, stage\_wheel\_speeds() should be used instead of this. But if you want to set the wheel speeds regardless of robot motion, for example to use the wheels as motors for a contraption, this command will work.
+### robot.comands.body.stage\_linear\_angular(linear\_speed, angular\_speed)
 This will start the robot moving with the given linear and angular speeds. If angular speed is zero, the robot will simply drive straight.  If linear speed is zero, the robot will turn in place.  If both linear and angular are non-zero, the robot will drive in a circle.  
 Optionally this command will also accept an acceleration for the linear and angular speeds. The defaults will yield smoother motion, at the cost of slightly less responsiveness.
 ## robot.commands.RGB
 The commands in this object control the robot's RGB lights.
 ## robot.commands.accessory
 The commands in this object are specific to various robot accessories.
-### robot.commands.accessory.do_sketchkit_pen_down()
+### robot.commands.accessory.do\_sketchkit\_pen\_down()
 For the [SketchKit accessory](https://store.makewonder.com/pages/sketch-kit), move the marker to the 'drawing' position.
-### robot.commands.accessory.do_sketchkit_pen_up()
+### robot.commands.accessory.do\_sketchkit\_pen\_up()
 For the [SketchKit accessory](https://store.makewonder.com/pages/sketch-kit), move the marker to the 'not drawing' position.
-### robot.commands.accessory.do_xylo_hit()
+### robot.commands.accessory.do\_xylo\_hit()
 For the [Xylophone accessory](https://www.makewonder.com/dash##accessories), perform a single 'hit' of the mallet.
-### robot.commands.accessory.do_launcher_launch(power)
+### robot.commands.accessory.do\_launcher\_launch(power)
 For the [Launcher accessory](https://www.makewonder.com/dash##accessories), launch a loaded ball.
-### robot.commands.accessory.do_launcher_reload_left()
+### robot.commands.accessory.do\_launcher\_reload\_left()
 For the [Launcher accessory](https://www.makewonder.com/dash##accessories), load a ball from the left hopper.
-### robot.commands.accessory.do_launcher_reload_right()
+### robot.commands.accessory.do\_launcher\_reload\_right()
 For the [Launcher accessory](https://www.makewonder.com/dash##accessories), load a ball from the right hopper.
 
 
@@ -121,35 +121,35 @@ Available on all robots.
 All the robots emit an infrared 'beacon'. Dash and Cue have two infrared sensors in their 'eye' to detect the beacons.  
 This sensor provides realtime information about other robots seen by the robot.
 Available on Dash and Cue.
-## robot.sensors.button_1
+## robot.sensors.button\_1
 Boolean state of a button on the top of the robot's head.  
 Available on all robots.
-## robot.sensors.button_2
+## robot.sensors.button\_2
 Boolean state of a button on the top of the robot's head.  
 Available on all robots.
-## robot.sensors.button_3
+## robot.sensors.button\_3
 Boolean state of a button on the top of the robot's head.  
 Available on all robots.
-## robot.sensors.button_main
+## robot.sensors.button\_main
 Boolean state of a button on the top of the robot's head.  
 Available on all robots.
-## robot.sensors.distance_front_left_facing
+## robot.sensors.distance\_front\_left\_facing
 Realtime distance / reflectance data. See [wwSensorDistance.py](../WonderPy/components/wwSensorDistance.py) for more details.
 Available on Dash and Cue.
-## robot.sensors.distance_front_right_facing
+## robot.sensors.distance\_front\_right\_facing
 Realtime distance / reflectance data. See [wwSensorDistance.py](../WonderPy/components/wwSensorDistance.py) for more details.
 Available on Dash and Cue.
-## robot.sensors.distance_front_rear
+## robot.sensors.distance\_front\_rear
 Realtime distance / reflectance data. See [wwSensorDistance.py](../WonderPy/components/wwSensorDistance.py) for more details.
 Available on Dash and Cue.
 ## robot.sensors.gyroscope
 Realtime information about the angular velocity of the robot around 3 axes.  
 Available on Dash and Cue.
-## robot.sensors.head_pan
+## robot.sensors.head\_pan
 The current pan of the robot's head.  
 Be sure to understand the [coordinate system](#coordinate-systems).  
 Available on Dash and Cue.
-## robot.sensors.head_tilt
+## robot.sensors.head\_tilt
 The current tilt of the robot's head.  
 Be sure to understand the [coordinate system](#coordinate-systems).  
 Available on Dash and Cue.
@@ -159,9 +159,9 @@ Be sure to understand the [coordinate system](#coordinate-systems).
 Available on Dash and Cue.
 ## robot.sensors.speaker
 Boolean indicator of whether or not the robot is currently playing a sound.
-## robot.sensors.wheel_left
+## robot.sensors.wheel\_left
 Realtime information about the distance travelled by the left wheel.
-## robot.sensors.wheel_right
+## robot.sensors.wheel\_right
 Realtime information about the distance travelled by the right wheel.
 
 
