@@ -114,7 +114,10 @@ Feature requests for the API should be sent as [new Issues in github](https://gi
 
 
 # Sharing your work ?
-Got a great picture or video ?  
-If you're sharing your Dash, Dot or Cue work on [Twitter](https://twitter.com/WonderWorkshop) or [Instagram](https://www.instagram.com/wonderworkshop/), remember to tag **@WonderWorkshop** !
+Made something cool ? We'd love to see it !  
+Send your photos, videos, and links to developers@makewonder.com .
+
+( Note, we can't promise a reply to all emails )
+
 
 
