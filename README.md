@@ -94,7 +94,8 @@ As of this writing, the open issues are:
 # Contribute
 Pull requests are welcome!  
 Please check the list of issues and todo's at the [WonderPy repository on github](https://github.com/playi/WonderPy/issues).  
-Additional examples would also be great:
+
+Additional examples in the [WonderPyExamples repository](https://github.com/WonderPyExamples) would also be great:
 
 * Integrations with other cool packages
 * IoT integrations
@@ -118,6 +119,4 @@ Made something cool ? We'd love to see it !
 Send your photos, videos, and links to developers@makewonder.com .
 
 ( Note, we can't promise a reply to all emails )
-
-
 
