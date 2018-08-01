@@ -31,7 +31,7 @@ class WWRobot(object):
 
         self._command_queue = queue.Queue()
 
-        self._sensor_count = long(0)
+        self._sensor_count               = 0
         self._queues_waiting_for_sensors = set()
 
         self._sensors           = WWSensors (self)

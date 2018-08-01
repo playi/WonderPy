@@ -1,6 +1,6 @@
 import math
 from WonderPy.core.wwConstants import WWRobotConstants
-from wwSensorBase import WWSensorBase
+from .wwSensorBase import WWSensorBase
 from WonderPy.util import wwMath
 
 _rcv = WWRobotConstants.RobotComponentValues

@@ -1,7 +1,8 @@
+import time
+
 from WonderPy.core.wwConstants import WWRobotConstants
 from WonderPy.core import wwMain
-from wwComponentBase import WWComponentBase
-import time
+from .wwComponentBase import WWComponentBase
 
 _rc  = WWRobotConstants.RobotComponent
 _rcv = WWRobotConstants.RobotComponentValues

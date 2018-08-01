@@ -1,4 +1,4 @@
-from wwComponentBase import WWComponentBase
+from .wwComponentBase import WWComponentBase
 
 
 class WWSensorBase(WWComponentBase):
