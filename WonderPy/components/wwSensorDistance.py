@@ -1,5 +1,5 @@
 from WonderPy.core.wwConstants import WWRobotConstants
-from wwSensorBase import WWSensorBase
+from .wwSensorBase import WWSensorBase
 
 _rcv = WWRobotConstants.RobotComponentValues
 _expected_json_fields = (

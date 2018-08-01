@@ -1,4 +1,4 @@
-from wwCommandBase import WWCommandBase
+from .wwCommandBase import WWCommandBase
 from WonderPy.core.wwConstants import WWRobotConstants
 
 _rc  = WWRobotConstants.RobotComponent

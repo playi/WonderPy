@@ -20,8 +20,8 @@ if sys.version_info > (3, 0):
 else:
     import Queue as queue
 
-from wwRobot import WWRobot
-from wwConstants import WWRobotConstants
+from .wwRobot import WWRobot
+from .wwConstants import WWRobotConstants
 from WonderPy.core import wwMain
 from WonderPy.config import WW_ROOT_DIR
 

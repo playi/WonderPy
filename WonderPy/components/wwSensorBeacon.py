@@ -1,11 +1,14 @@
 from WonderPy.core.wwConstants import WWRobotConstants
-from wwSensorBase import WWSensorBase
+from .wwSensorBase import WWSensorBase
 
 _rcv = WWRobotConstants.RobotComponentValues
 _rt  = WWRobotConstants.RobotType
 _expected_json_fields = (
     # the beacon sensor is a bit special, as we may invent empty ones.
 )
+import sys
+if sys.version_info > (3,):
+    xrange = range
 
 
 class WWSensorBeacon(WWSensorBase):

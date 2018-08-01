@@ -3,6 +3,7 @@ import sys
 
 if sys.version_info > (3, 0):
     import queue
+    long = int
 else:
     import Queue as queue
 
