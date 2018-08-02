@@ -1,16 +1,38 @@
 # WonderPy
+
+WonderPy is a Python package providing an interface to the WonderWorkshop robots Dash, Dot, and Cue.  It has fine-grained realtime access to all the robot's commands and sensors.  There is a companion repository with tutorials and examples.
+
+To get the most out of WonderPy, you should already have a beginner-level comfort with python and the command-line.
+
+# Project Status
 [![Build status](https://travis-ci.org/playi/WonderPy.svg?master)](https://travis-ci.org/playi)
 
-This is an alpha-status project to bring realtime control of the WonderWorkshop robots to Python.  
-To get the most out of this, you should already have a beginner-level comfort with python and the command-line.
-# Project Status
-At an "Alpha" release. It's ready to be tried out by folks who are willing to live with a few more rough-edges than one would want, and ideally who can provide constructive criticism.  
+WonderPy is current at an "Alpha" release. It's ready to be tried out by folks who are willing to live with a few more rough-edges than one would want, and ideally who can provide constructive criticism.  
 
 Please see the ["Issues" in github](https://github.com/playi/WonderPy/issues) for an up-to-date list of known bugs and to-do items.  
 
+* Command Categories:
+	* eyering
+	* head
+	* media
+	* monoLED
+	* body
+	* RGB
+	* accessory
+* Sensor Categories:
+	* accelerometer / gyroscope
+	* beacon
+	* buttons
+	* distance
+	* head angles
+	* pose
+	* speaker
+	* wheels
+
+
 # Setup
-## Prerequisites
-1. MacOS
+## Requirements
+1. macOS
 2. Familiarity with python and command-line tools
 
 ## Create a new python virtual environment
@@ -18,22 +40,16 @@ Please see the ["Issues" in github](https://github.com/playi/WonderPy/issues) fo
 2. `source venv/bin/activate`
 
 ## Install dependencies
-1. XCode Command Line Tools must be installed. `xcode-select --install` should work.
 
-You may need to install XCode from the App Store, then download and install Command Line Tools from the Apple Developer site (https://developer.apple.com/download/more/). There, you can search for Command Line Tools, find the appropriate file based on your version of OS X and XCode, download and install Command Line Tools.
+1. XCode Command Line Tools must be installed:  
+  `xcode-select --install`
 
-Once installed, you may need to uninstall/reinstall Python 2.x.
+  You may need to install XCode, visit the [Apple Developer site](https://developer.apple.com/download/more) and search for "Command Line Tools". Then download and install the appropriate file based on your version of macOS and XCode.
 
-```
-$ rm -rf ~/.pyenv/versions/2.7.14
-$ pyenv install 2.7.14
-```
+  Some users may need to uninstall/reinstall Python 2.x afterwards, depending on their setup. (Since there are many ways python is installed, we don't provide instructions for that here)
 
-> Note: your setup might be slightly different if you have a different version or are using virtualenv.
-
-2. Unfortunately, the AdaFruit BTLE package is not hosted on PyPi, which makes it difficult to automatically install when this package is installed via pip. Additionally, this project requires a fork of that project by WonderWorkshop, which as of this writing has not been merged back into the main project.
-
-`pip install git+git://github.com/playi/Adafruit_Python_BluefruitLE@928669a#egg=Adafruit_BluefruitLE`
+2. The AdaFruit BTLE package is not hosted on PyPi, which makes it difficult to automatically install when this package is installed via pip. Additionally, this project requires a fork of that project by WonderWorkshop, which as of this writing has not been merged back into the main project.  
+  `pip install git+git://github.com/playi/Adafruit_Python_BluefruitLE@928669a#egg=Adafruit_BluefruitLE`
 
 ## Install WonderPy
 `pip install WonderPy`
@@ -104,6 +120,10 @@ As of this writing, the open issues are:
 * Make the pip installation more standard.
   Currently this requires a manual install of a github-based fork of the AdaFruit package.
 * Port to Windows, Linux
+
+# Feedback - Survey
+How is WonderPy working for you ? We're eager to hear.  
+Please take time to [fill out a survey](https://www.surveymonkey.com/r/8KPTT3W)!   
 
 # Contribute
 Pull requests are welcome!  
