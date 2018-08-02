@@ -18,8 +18,22 @@ Please see the ["Issues" in github](https://github.com/playi/WonderPy/issues) fo
 2. `source venv/bin/activate`
 
 ## Install dependencies
-Unfortunately the AdaFruit BTLE package is not hosted on PyPi, which makes it difficult to automatically install when this package is installed via pip. Additionally, this project requires a fork of that project by WonderWorkshop, which as of this writing has not been merged back into the main project.
-1. `pip install git+git://github.com/playi/Adafruit_Python_BluefruitLE@928669a#egg=Adafruit_BluefruitLE`
+1. XCode Command Line Tools must be installed. `xcode-select --install` should work.
+
+You may need to install XCode from the App Store, then download and install Command Line Tools from the Apple Developer site (https://developer.apple.com/download/more/). There, you can search for Command Line Tools, find the appropriate file based on your version of OS X and XCode, download and install Command Line Tools.
+
+Once installed, you may need to uninstall/reinstall Python 2.x.
+
+```
+$ rm -rf ~/.pyenv/versions/2.7.14
+$ pyenv install 2.7.14
+```
+
+> Note: your setup might be slightly different if you have a different version or are using virtualenv.
+
+2. Unfortunately, the AdaFruit BTLE package is not hosted on PyPi, which makes it difficult to automatically install when this package is installed via pip. Additionally, this project requires a fork of that project by WonderWorkshop, which as of this writing has not been merged back into the main project.
+
+`pip install git+git://github.com/playi/Adafruit_Python_BluefruitLE@928669a#egg=Adafruit_BluefruitLE`
 
 ## Install WonderPy
 `pip install WonderPy`
