@@ -65,11 +65,11 @@ The commands in this object let you control the LED in the main button on the to
 The commands in here let you drive the robot.  
 There is some subtlety to these, so we mention some key aspects.  
 As usual, bear in mind that the *do\_* family of commands will block execution until the command completes, while the *stage\_* family send the command and continue execution immediately without waiting for completion.
-### robot.comands.body.do\_forward(distance, speed)
+### robot.commands.body.do\_forward(distance, speed)
 Drive forward the specified distance and then stop.
-### robot.comands.body.do\_turn(degrees, speed)
+### robot.commands.body.do\_turn(degrees, speed)
 Turn counter-clockwise the specified degrees and then stop.
-### robot.comands.body.do\_pose(x, y, degrees, time, mode)
+### robot.commands.body.do\_pose(x, y, degrees, time, mode)
 Drive to a 'pose' within the given time and then stop.  
 Be sure to understand the [coordinate system](#coordinate-systems).  
 A 'Pose' means a position and an orientation for the robot. 
@@ -78,15 +78,15 @@ The different modes are described in the WWPoseMode class in [wwConstants.py](..
 The _time_ parameter is always relative to the moment the command is received by the robot.  Even when the "mode" is relative, the time parameter is interpreted this way.
 Additionally, the pose command is the only command which the robot enqueues.  The robot maintains a queue of up to ten pose commands.  However, be sure to wait for at least one sensor packet to arrive before sending additional pose commands, otherwise the second one will override the first.  When sending pose commands before the current pose is finished, bear in mind that _time_ parameter is always relative to when the command is received by the robot.  The robot provides a sensor called the "pose watermark" indicating the current depth of the pose queue.  This can be monitored in the robot sensor "pose" as the member "watermark\_inferred".  The ideal number of poses in the queue is about five.  
 Managing these details of the pose system can be complex, and for that reason this API provides a simplified system which allows you to provide a list of points and a linear and angular speed, and will manage generating the corresponding poses and sending them to the robot at the appropriate intervals.  The use of this utility can be seen in the ["sketcher.py" example in the WonderPyExamples](https://github.com/playi/WonderPyExamples/blob/master/misc/sketcher.py) repository.
-### robot.comands.body.stage\_stop()
+### robot.commands.body.stage\_stop()
 Stop driving.
-### robot.comands.body.stage\_wheel\_speeds(left, right)
+### robot.commands.body.stage\_wheel\_speeds(left, right)
 Drive the robot with the corresponding wheel speeds.  
 Note this is actually converted to _stage\_linear\_angular()_ for improved accuracy.
-### robot.comands.body.stage\_wheel\_speeds\_naive(left, right)
+### robot.commands.body.stage\_wheel\_speeds\_naive(left, right)
 Drive the robot with the corresponding wheel speeds.  
 In almost all cases, stage\_wheel\_speeds() should be used instead of this. But if you want to set the wheel speeds regardless of robot motion, for example to use the wheels as motors for a contraption, this command will work.
-### robot.comands.body.stage\_linear\_angular(linear\_speed, angular\_speed)
+### robot.commands.body.stage\_linear\_angular(linear\_speed, angular\_speed)
 This will start the robot moving with the given linear and angular speeds. If angular speed is zero, the robot will simply drive straight.  If linear speed is zero, the robot will turn in place.  If both linear and angular are non-zero, the robot will drive in a circle.  
 Optionally this command will also accept an acceleration for the linear and angular speeds. The defaults will yield smoother motion, at the cost of slightly less responsiveness.
 ## robot.commands.RGB
