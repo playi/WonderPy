@@ -36,19 +36,25 @@ Please see the ["Issues" in github](https://github.com/playi/WonderPy/issues) fo
 2. Python 2.7
 3. Familiarity with python and command-line tools
 
+
 ## Install dependencies
 
-1. XCode Command Line Tools must be installed:  
+1. pip
+Installing pip tends to vary from system to system, so we can't provide specific instructions it. Here's [Google on the topic](https://www.google.com/search?q=how+to+install+pip).
+
+2. VirtualEnv  
+  `pip install virtualenv`  
+  Depending on how you installed pip, you may need to  
+  `sudo pip install virtualenv`
+
+3. XCode Command Line Tools must be installed:  
   `xcode-select --install`
 
   You may need to install XCode, visit the [Apple Developer site](https://developer.apple.com/download/more) and search for "Command Line Tools". Then download and install the appropriate file based on your version of macOS and XCode.
 
   Some users may need to uninstall/reinstall Python 2.x afterwards, depending on their setup. (Since there are many ways python is installed, we don't provide instructions for that here)
   
-2. Install `pip` and `virtualenv`.  
-   The methods for installing these two tend to vary from system to system and user to user.
-
-2. The AdaFruit BTLE package is not hosted on PyPi, which makes it difficult to automatically install when this package is installed via pip. Additionally, this project requires a fork of that project by WonderWorkshop, which as of this writing has not been merged back into the main project.  
+4. The AdaFruit BTLE package is not hosted on PyPi, which makes it difficult to automatically install when this package is installed via pip. Additionally, this project requires a fork of that project by WonderWorkshop, which as of this writing has not been merged back into the main project.  
   `pip install git+git://github.com/playi/Adafruit_Python_BluefruitLE@928669a#egg=Adafruit_BluefruitLE`
 
 ## Create a new python virtual environment
