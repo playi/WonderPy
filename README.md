@@ -32,18 +32,23 @@ Please see the ["Issues" in github](https://github.com/playi/WonderPy/issues) fo
 
 # Setup
 ## Requirements
-1. macOS
+1. MacOS
 2. Python 2.7
 3. Familiarity with python and command-line tools
 
 
-## Install dependencies
+## Install hard dependencies
 
-1. pip
-Installing pip tends to vary from system to system, so we can't provide specific instructions it. Here's [Google on the topic](https://www.google.com/search?q=how+to+install+pip).
+1. pip  
+**pip** is the standard package manager for python. It's used to install packages such as WonderPy and AdaFruit BLE, below.  
+It can be tempting to skip installing this, but unfortunately it is required.  
+Installing pip tends to vary significantly from system to system, so we can't provide specific instructions it.  The best we can do is refer you to google to find the best match for your situation.  Here's [Google on the topic](https://www.google.com/search?q=how+to+install+pip).
 
 2. VirtualEnv  
+  VirtualEnv is a system which enables you to be sure which version of Python you're running for WonderPy, and which packages are present.  If you are a Python expert you could possibly skip this step, but even for experts this is very highly recommended.  
+    
   `pip install virtualenv`  
+    
   Depending on how you installed pip, you may need to  
   `sudo pip install virtualenv`
 
