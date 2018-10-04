@@ -146,7 +146,7 @@ Please take time to [fill out a survey](https://www.surveymonkey.com/r/8KPTT3W)!
 Pull requests are welcome!  
 Please check the list of issues and todo's at the [WonderPy repository on github](https://github.com/playi/WonderPy/issues).  
 
-Additional examples in the [WonderPyExamples repository](https://github.com/WonderPyExamples) would also be great:
+Additional examples in the [WonderPyExamples repository](https://github.com/playi/WonderPyExamples) would also be great:
 
 * Integrations with other cool packages
 * IoT integrations
