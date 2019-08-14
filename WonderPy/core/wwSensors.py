@@ -7,7 +7,7 @@ from WonderPy.components.wwSensorPing import WWSensorPing
 from WonderPy.components.wwSensorMedia import WWSensorMedia
 from WonderPy.components.wwSensorAngle import WWSensorAngle
 from WonderPy.components.wwSensorDistance import WWSensorDistance
-from WonderPy.components.wwSensorBeacon import WWSensorBeacon
+from WonderPy.components.wwSensorBeacon import WWSensorBeacon,WWSensorBeaconV2
 from WonderPy.components.wwSensorWheel import WWSensorWheel
 from WonderPy.components.wwSensorGyroscope import WWSensorGyroscope
 
@@ -46,6 +46,7 @@ class WWSensors(object):
 
         # dash & cue
         self._beacon                      = WWSensorBeacon       (robot)
+        self._beacon_v2                   = WWSensorBeaconV2     (robot)
         self._distance_front_left_facing  = WWSensorDistance     (robot)
         self._distance_front_right_facing = WWSensorDistance     (robot)
         self._distance_rear               = WWSensorDistance     (robot)
@@ -60,6 +61,7 @@ class WWSensors(object):
             _rc.WW_SENSOR_ACCELEROMETER               : self._accelerometer,
             _rc.WW_SENSOR_ANIMATION_PLAYING           : self._animation,
             _rc.WW_SENSOR_BEACON                      : self._beacon,
+            _rc.WW_SENSOR_BEACON_V2                   : self._beacon_v2,
             _rc.WW_SENSOR_BODY_POSE                   : self._pose,
             _rc.WW_SENSOR_BUTTON_1                    : self._button_1,
             _rc.WW_SENSOR_BUTTON_2                    : self._button_2,
@@ -88,6 +90,10 @@ class WWSensors(object):
     @property
     def beacon(self):
         return self._beacon
+
+    @property
+    def beacon_v2(self):
+        return self._beacon_v2
 
     @property
     def button_1(self):
