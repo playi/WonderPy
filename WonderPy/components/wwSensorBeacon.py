@@ -153,3 +153,18 @@ class WWSensorBeacon(WWSensorBase):
                         highest_count = new_count
 
             return ret
+
+
+class WWSensorBeaconV2(WWSensorBase):
+    # For now, just use this to keep track of Beacon IDs
+    def __init__(self, robot):
+        super(WWSensorBeaconV2, self).__init__(robot)
+        self._robot_id_raw = None
+       
+    @property
+    def robot_id_raw(self): 
+        return self._robot_id_raw
+
+    def parse(self, single_component_dictionary):
+        if _rcv.WW_SENSOR_VALUE_BEACON_ROBOT_ID in single_component_dictionary:
+            self._robot_id_raw = single_component_dictionary[_rcv.WW_SENSOR_VALUE_BEACON_ROBOT_ID]
